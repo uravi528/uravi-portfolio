@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-
-// Self-hosted fonts (no external network calls at build time)
 import "@fontsource/fraunces/400.css";
 import "@fontsource/fraunces/400-italic.css";
 import "@fontsource/fraunces/500.css";
@@ -10,8 +8,9 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
-
 import "./globals.css";
+import { Nav } from "@/components/nav/Nav";
+import { SecurityAlert } from "@/components/SecurityAlert";
 
 export const metadata: Metadata = {
   title: "Uravi Patel",
@@ -21,12 +20,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream">
+        <SecurityAlert />
+        <Nav />
+        <main className="flex-1">{children}</main>
+        <footer className="border-t border-line px-4 sm:px-8 py-8 max-w-5xl mx-auto w-full">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 font-body text-sm text-ink-soft">
+            <p>Uravi Patel · Cybersecurity Student, SUNY Canton</p>
+            <p>© 2026</p>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }

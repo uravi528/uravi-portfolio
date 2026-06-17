@@ -43,6 +43,19 @@ body {
   font-family: var(--font-body);
 }
 
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 20s linear infinite;
+}
+
+.font-display { font-family: "Fraunces", Georgia, "Times New Roman", serif; }
+.font-body { font-family: "Inter", -apple-system, "Segoe UI", sans-serif; }
+.font-mono { font-family: "JetBrains Mono", "Courier New", monospace; }
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {

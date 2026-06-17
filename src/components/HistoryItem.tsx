@@ -7,6 +7,7 @@ import {
   Users,
   Video,
   ShieldCheck,
+  Code,
   ChevronRight,
 } from "lucide-react";
 import { DetailModal } from "./DetailModal";
@@ -18,6 +19,7 @@ const iconMap: Record<string, React.ElementType> = {
   Users: Users,
   Video: Video,
   ShieldCheck: ShieldCheck,
+  Code: Code,
 };
 
 export function HistoryItem({ entry }: { entry: HistoryEntry }) {
