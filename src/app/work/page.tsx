@@ -14,6 +14,7 @@ export default function WorkPage() {
         <Eyebrow>Resume</Eyebrow>
         <a
           href="/UraviPatel_Resume.pdf"
+          download
           target="_blank"
           rel="noopener noreferrer"
           className="group mt-6 flex items-center justify-between rounded-2xl border border-line bg-cream-warm/50 p-6 sm:p-8 hover:border-rust/40 hover:bg-cream-warm transition-all"
