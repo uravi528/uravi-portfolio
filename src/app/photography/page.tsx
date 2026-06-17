@@ -87,7 +87,7 @@ export default function PhotographyPage() {
           ))}
         </div>
         <p className="font-body text-xs text-ink-soft/50 mt-3 text-center">
-          Replace these placeholders with real photos in src/app/photography/page.tsx
+          Click any to visit the full gallery
         </p>
       </section>
     </div>

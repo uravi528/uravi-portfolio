@@ -8,9 +8,9 @@ export default function Home() {
           Uravi Patel
         </p>
 
-        <h1 className="font-display italic text-4xl sm:text-6xl leading-[1.2] text-ink max-w-3xl mb-8">
+        <h1 className="font-display text-4xl sm:text-6xl leading-[1.2] text-ink max-w-3xl mb-8">
           Cybersecurity student. I build things{" "}
-          <span className="text-rust">sometimes for security</span>,
+          <em className="text-rust">sometimes for security</em>,
           sometimes for my community, sometimes just because.
         </h1>
 

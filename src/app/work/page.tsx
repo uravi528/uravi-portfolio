@@ -9,12 +9,11 @@ export default function WorkPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-8 py-14 sm:py-20 space-y-20">
 
-      {/* Resume */}
+      {/* Resume — opens in new tab, no download */}
       <section>
         <Eyebrow>Resume</Eyebrow>
         <a
           href="/UraviPatel_Resume.pdf"
-          download
           target="_blank"
           rel="noopener noreferrer"
           className="group mt-6 flex items-center justify-between rounded-2xl border border-line bg-cream-warm/50 p-6 sm:p-8 hover:border-rust/40 hover:bg-cream-warm transition-all"
@@ -28,7 +27,9 @@ export default function WorkPage() {
             </p>
           </div>
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line group-hover:border-rust group-hover:text-rust text-ink-soft transition-all">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17 17 7M7 7h10v10"/>
+            </svg>
           </div>
         </a>
       </section>
@@ -60,10 +61,7 @@ export default function WorkPage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-cream-warm border border-line px-3 py-1 font-body text-xs text-ink"
-                  >
+                  <span key={item} className="rounded-full bg-cream-warm border border-line px-3 py-1 font-body text-xs text-ink">
                     {item}
                   </span>
                 ))}
