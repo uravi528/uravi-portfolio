@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  /* Core palette */
+  --color-cream: #F7F4EE;
+  --color-cream-warm: #F0EAE0;
+  --color-ink: #1A1816;
+  --color-ink-soft: #4A4540;
+  --color-rust: #B8632A;
+  --color-rust-soft: #D88A52;
+  --color-sage: #DCE4CC;
+  --color-sage-deep: #A8B894;
+  --color-blue: #CBDAF2;
+  --color-blue-deep: #8FA9D6;
+  --color-line: #E2DCD0;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-warm: var(--color-cream-warm);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-rust: var(--color-rust);
+  --color-rust-soft: var(--color-rust-soft);
+  --color-sage: var(--color-sage);
+  --color-sage-deep: var(--color-sage-deep);
+  --color-blue: var(--color-blue);
+  --color-blue-deep: var(--color-blue-deep);
+  --color-line: var(--color-line);
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
