@@ -10,7 +10,6 @@ import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "./globals.css";
 import { Nav } from "@/components/nav/Nav";
-import { SecurityAlert } from "@/components/SecurityAlert";
 
 export const metadata: Metadata = {
   title: "Uravi Patel",
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-cream">
-        <SecurityAlert />
         <Nav />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-line px-4 sm:px-8 py-8 max-w-5xl mx-auto w-full">

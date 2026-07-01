@@ -8,11 +8,15 @@ export default function Home() {
           Uravi Patel
         </p>
 
-        <h1 className="font-display text-4xl sm:text-6xl leading-[1.2] text-ink max-w-3xl mb-8">
+        <h1 className="font-display text-4xl sm:text-6xl leading-[1.2] text-ink max-w-3xl mb-6">
           Cybersecurity student. I build things{" "}
           <em className="text-rust">sometimes for security</em>,
           sometimes for my community, sometimes just because.
         </h1>
+
+        <p className="font-display italic text-xl sm:text-2xl text-ink-soft max-w-2xl mb-10 leading-snug">
+          Creative at heart, cybersecurity student by focus — I like making things that are both intentional and mine.
+        </p>
 
         <div className="flex flex-wrap gap-3 mb-12">
           <a
@@ -39,15 +43,15 @@ export default function Home() {
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4 max-w-2xl">
-          <a href="/work" className="group rounded-xl border border-line bg-cream-warm/50 p-4 hover:border-rust/40 hover:bg-cream-warm transition-all">
+          <a href="/work" className="group rounded-xl border border-line bg-cream p-4 shadow-[0_1px_2px_rgba(26,24,22,0.05)] hover:shadow-[0_10px_24px_-12px_rgba(26,24,22,0.18)] hover:-translate-y-0.5 transition-all">
             <p className="font-display text-lg text-ink mb-1 group-hover:text-rust transition-colors">Work</p>
             <p className="font-body text-xs text-ink-soft">Projects, resume, skills</p>
           </a>
-          <a href="/about" className="group rounded-xl border border-line bg-cream-warm/50 p-4 hover:border-rust/40 hover:bg-cream-warm transition-all">
+          <a href="/about" className="group rounded-xl border border-line bg-cream p-4 shadow-[0_1px_2px_rgba(26,24,22,0.05)] hover:shadow-[0_10px_24px_-12px_rgba(26,24,22,0.18)] hover:-translate-y-0.5 transition-all">
             <p className="font-display text-lg text-ink mb-1 group-hover:text-rust transition-colors">About</p>
             <p className="font-body text-xs text-ink-soft">Background, history</p>
           </a>
-          <a href="/photography" className="group rounded-xl border border-line bg-cream-warm/50 p-4 hover:border-rust/40 hover:bg-cream-warm transition-all">
+          <a href="/photography" className="group rounded-xl border border-line bg-cream p-4 shadow-[0_1px_2px_rgba(26,24,22,0.05)] hover:shadow-[0_10px_24px_-12px_rgba(26,24,22,0.18)] hover:-translate-y-0.5 transition-all">
             <p className="font-display text-lg text-ink mb-1 group-hover:text-rust transition-colors">Photography</p>
             <p className="font-body text-xs text-ink-soft">Hueman Story</p>
           </a>
