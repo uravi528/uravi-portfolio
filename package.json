@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/fraunces": "^5.2.9",
+    "@fontsource/instrument-serif": "^5.2.8",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "framer-motion": "^12.40.0",

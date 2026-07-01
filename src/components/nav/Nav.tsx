@@ -2,16 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/#about", label: "About" },
   { href: "/photography", label: "Photography" },
 ];
 
 export function Nav() {
   const pathname = usePathname();
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash);
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
 
   return (
     <nav className="sticky top-0 z-30 w-full border-b border-line bg-cream/90 backdrop-blur-sm">
@@ -25,8 +34,10 @@ export function Nav() {
         <div className="flex items-center gap-1">
           {links.map((link) => {
             const active =
-              link.href === "/"
-                ? pathname === "/"
+              link.href === "/#about"
+                ? pathname === "/" && hash === "#about"
+                : link.href === "/"
+                ? pathname === "/" && hash !== "#about"
                 : pathname.startsWith(link.href);
             return (
               <Link

@@ -137,6 +137,11 @@ export function ProjectDetail({ project }: { project: Project }) {
           {project.why.split(".")[0]}.
         </p>
         <p className="font-body text-base text-ink-soft leading-relaxed max-w-xl">{project.why}</p>
+        {project.pullQuote && (
+          <p className="font-display text-3xl sm:text-4xl text-ink leading-snug mt-8 max-w-xl border-l-2 border-rust pl-5">
+            {project.pullQuote}
+          </p>
+        )}
       </motion.section>
 
       {/* Process — animated terminal log */}
@@ -171,7 +176,34 @@ export function ProjectDetail({ project }: { project: Project }) {
             {project.status === "live" ? "What difference it made" : "Where it stands"}
           </p>
         </div>
-        <p className="font-body text-base text-ink-soft leading-relaxed max-w-xl">{project.results}</p>
+        {project.resultsBullets ? (
+          <>
+            <p className="font-body text-base text-ink-soft leading-relaxed max-w-xl mb-5">{project.results}</p>
+            <ul className="space-y-3 max-w-xl">
+              {project.resultsBullets.map((bullet, i) => {
+                const [label, rest] = bullet.split(/—(.*)/);
+                return (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-rust shrink-0" aria-hidden="true" />
+                    <p className="font-body text-base text-ink-soft leading-relaxed">
+                      {rest ? (
+                        <>
+                          <span className="text-ink font-medium">{label.trim()}</span>
+                          {" —"}
+                          {rest}
+                        </>
+                      ) : (
+                        bullet
+                      )}
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        ) : (
+          <p className="font-body text-base text-ink-soft leading-relaxed max-w-xl">{project.results}</p>
+        )}
       </motion.section>
     </div>
   );

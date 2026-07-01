@@ -29,6 +29,7 @@
   --color-line: var(--color-line);
 
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-hero: "Instrument Serif", Georgia, "Times New Roman", serif;
   --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Courier New", monospace;
 }
@@ -53,6 +54,7 @@ body {
 }
 
 .font-display { font-family: "Fraunces", Georgia, "Times New Roman", serif; }
+.font-hero { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; }
 .font-body { font-family: "Inter", -apple-system, "Segoe UI", sans-serif; }
 .font-mono { font-family: "JetBrains Mono", "Courier New", monospace; }
 

@@ -19,6 +19,8 @@ export type Project = {
   why: string;
   process: string;
   results: string;
+  resultsBullets?: string[]; // optional structured version of results, takes priority over `results` on the detail page
+  pullQuote?: string; // optional bold callout line shown in the "why" section
   terminalLines: TerminalLine[]; // powers the animated "how it came together" log
   status: "live" | "building";
   icon: string;
@@ -69,10 +71,17 @@ export const projects: Project[] = [
       "A Telegram bot for my mandir's youth group that tracks sabha (assembly) attendance and spiritual progress. Each member has their own personal tracker they can check anytime.",
     why:
       "We had spreadsheets. So many spreadsheets. Going into each one to find someone's attendance or progress took forever, and honestly things got lost. I wanted something faster, more efficient, and actually friendly to use. Not everyone is comfortable with spreadsheets, but everyone is on Telegram.",
+    pullQuote: "Bots are the new spreadsheet.",
     process:
       "Built entirely in Google Apps Script with a Google Sheets backend, connected to the Telegram Bot API. The bot responds to commands like /attendance, /goals, and /status. Each member gets their own row in the sheet that updates in real time. I also added admin commands so coordinators can log entries without opening the sheet at all. I was genuinely figuring things out as I built it, the Telegram API docs became my best friend.",
     results:
-      "In daily use by my mandir's Kishori/Yuvati Mandal. It tracks niyam, NC27 eligibility, reading goals, and streak milestones for the whole group, and survived a full rebuild after a column-mapping bug in an earlier rewrite broke the sheet. Coordinators now check progress in seconds instead of digging through spreadsheets.",
+      "In daily use by my mandir's Kishori/Yuvati Mandal.",
+    resultsBullets: [
+      "Efficiency — coordinators find anyone's attendance or progress in seconds instead of digging through shared spreadsheets.",
+      "Integrity — one row per member, one source of truth, instead of duplicate sheets quietly drifting out of sync.",
+      "Real-time updates — every /attendance or /status check reflects the moment it happened, not last week's copy.",
+      "Adoption — friendlier than a spreadsheet, so members who'd never open Sheets actually check their own progress.",
+    ],
     terminalLines: [
       { text: "clasp create --type standalone", type: "cmd" },
       { text: "connecting Telegram Bot API...", type: "cmd" },
